@@ -1,0 +1,112 @@
+Which player had the most receiving touchdowns in 2025?
+ANSWER: Player with most receiving TDs: Emeka Egbuka with 2.0 TDs
+
+Which player had the most receiving touchdowns in 2025?
+
+
+LLM:
+content='I’m sorry, but I don’t have that information.' additional_kwargs={} response_metadata={'model': 'gpt-oss:20b', 'created_at': '2025-09-12T22:31:34.444711Z', 'done': True, 'done_reason': 'stop', 'total_duration': 4855496667, 'load_duration': 105991167, 'prompt_eval_count': 79, 'prompt_eval_duration': 442534875, 'eval_count': 227, 'eval_duration': 4306521250, 'model_name': 'gpt-oss:20b'} id='run--bd0eab1e-545e-4a90-a3f2-0e0e0fdfdf9b-0' usage_metadata={'input_tokens': 79, 'output_tokens': 227, 'total_tokens': 306}
+
+
+--------------------------------
+
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3m
+Invoking: `python_repl_ast` with `{'query': "df['ReceivingTD'].max()"}`
+
+
+[0m[36;1m[1;3m2.0[0m[32;1m[1;3m
+Invoking: `python_repl_ast` with `{'query': "df[df['ReceivingTD']==2]['PlayerName'].tolist()"}`
+
+
+[0m[36;1m[1;3m['Quentin Johnston', 'Emeka Egbuka'][0m[32;1m[1;3mThe highest number of receiving touchdowns recorded in the 2025 season is **2**.  
+Both **Quentin Johnston** (LAC) and **Emeka Egbuka** (TB) achieved that total, so they are tied for the most receiving touchdowns that year.[0m
+
+[1m> Finished chain.[0m
+
+Which player had the most receiving touchdowns in 2025?
+
+
+LLM with RAG:
+{'input': 'Which player had the most receiving touchdowns in 2025?', 'output': 'The highest number of receiving touchdowns recorded in the 2025 season is **2**.  \nBoth **Quentin Johnston** (LAC) and **Emeka\u202fEgbuka** (TB) achieved that total, so they are tied for the most receiving touchdowns that year.'}
+
+
+--------------------------------
+
+Which team had the most receiving touchdowns in 2025?
+LAC
+3.0
+ANSWER: Team with most receiving TDs: LAC with 3.0 TDs
+
+Which team had the most receiving touchdowns in 2025?
+
+
+LLM:
+content='I’m sorry, but I don’t have information on the 2025 NFL season.' additional_kwargs={} response_metadata={'model': 'gpt-oss:20b', 'created_at': '2025-09-12T22:31:46.784772Z', 'done': True, 'done_reason': 'stop', 'total_duration': 3555804875, 'load_duration': 90009000, 'prompt_eval_count': 79, 'prompt_eval_duration': 154018916, 'eval_count': 175, 'eval_duration': 3311043459, 'model_name': 'gpt-oss:20b'} id='run--0d3bdd7d-918d-43b3-ab97-bc5537a12b5e-0' usage_metadata={'input_tokens': 79, 'output_tokens': 175, 'total_tokens': 254}
+
+
+--------------------------------
+
+
+
+[1m> Entering new AgentExecutor chain...[0m
+[32;1m[1;3m
+Invoking: `python_repl_ast` with `{'query': "import pandas as pd\nprint('test')"}`
+
+
+[0m[36;1m[1;3mtest
+[0m[32;1m[1;3m
+Invoking: `python_repl_ast` with `{'query': "import pandas as pd\n# Assuming df is loaded\n# Let's compute team totals for ReceivingTD\nteam_totals = df.groupby('Team')['ReceivingTD'].sum()\nprint(team_totals)\nprint(team_totals.idxmax(), team_totals.max())"}`
+
+
+[0mTeam
+ARI    1.0
+ATL    0.0
+BAL    2.0
+BUF    1.0
+CAR    0.0
+CHI    1.0
+CIN    0.0
+CLE    1.0
+DAL    0.0
+DEN    1.0
+DET    1.0
+FA     0.0
+GB     1.0
+HOU    0.0
+IND    1.0
+JAX    0.0
+KC     0.0
+LAC    3.0
+LAR    0.0
+LV     1.0
+MIA    0.0
+MIN    1.0
+NE     1.0
+NO     0.0
+NYG    0.0
+NYJ    1.0
+PHI    0.0
+PIT    2.0
+SEA    0.0
+SF     0.0
+TB     2.0
+TEN    0.0
+WAS    0.0
+Name: ReceivingTD, dtype: float64
+[36;1m[1;3mLAC 3.0
+[0m[32;1m[1;3mThe team with the highest total of receiving touchdowns in the 2025 season was the **Los Angeles Chargers (LAC)**, with **3 receiving touchdowns**.[0m
+
+[1m> Finished chain.[0m
+
+Which team had the most receiving touchdowns in 2025?
+
+
+LLM with RAG:
+{'input': 'Which team had the most receiving touchdowns in 2025?', 'output': 'The team with the highest total of receiving touchdowns in the 2025 season was the **Los\u202fAngeles\u202fChargers (LAC)**, with **3 receiving touchdowns**.'}
+
+
+--------------------------------
+
