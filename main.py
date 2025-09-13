@@ -55,8 +55,6 @@ def main():
 
     # check the answer without LLM/RAG
     team_receiving_tds = df.groupby('Team')['ReceivingTD'].sum().sort_values(ascending=False)
-    print(team_receiving_tds.index[0])
-    print(team_receiving_tds.iloc[0])
     print(f"ANSWER: Team with most receiving TDs: {team_receiving_tds.index[0]} with {team_receiving_tds.iloc[0]} TDs")
 
     response = get_non_rag_response(question, llm)
