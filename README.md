@@ -10,7 +10,7 @@ This is an exploratory and demonstration project that uses Langchain and Retriev
 
 ## Overview
 
-RAG is one of several techniques that improve LLM performance by providing addional data to the model.  This additional data may be something that the LLM was not originally trained on and is unable to consider in its response.  Similarly, the additional data may frequently change and providing it to the LLM allows the model to provide more accurate responses based on current information.  An advantage of RAG compared to other techniques is that the additional data can be provided along with the LLM prompt and can therefore change along with the prompt.  However this is also a disadvantage in that the processing and other requirements to implement and support RAG must be incurred with each prompt.
+RAG is one of several techniques that improve LLM performance by providing additional data to the model.  This additional data may be something that the LLM was not originally trained on and is unable to consider in its response.  Similarly, the additional data may frequently change and providing it to the LLM allows the model to provide more accurate responses based on current information.  An advantage of RAG compared to other techniques is that the additional data can be provided along with the LLM prompt and can therefore change along with the prompt.  However this is also a disadvantage in that the processing and other requirements to implement and support RAG must be incurred with each prompt.
 
 The goal of this project is to ask the LLM two questions related to NFL player performance (discussed below) and see if the responses improve if supporting data is provided to the LLM via RAG.  For each question, the following process was used:
 
@@ -133,10 +133,7 @@ This project was initially attempted with the llama3.2 1B model, but it was unab
 This was an interesting project that I think clearly demonstrates the capability of RAG to add new data to an LLM.
 
 * exploring an entire season of data and conduct more in-depth analysis
-* explore limitations of prohibiting the agent from exeucting Python code i.e. the ```allow_dangerous_code = False``` agent parameter
+* explore limitations of prohibiting the agent from executing Python code i.e. the ```allow_dangerous_code = False``` agent parameter
 * similarly, explore precautions/safeguards if necessary to have ```allow_dangerous_code = True```
 * evaluate the performance and capability of different models and model sizes
 * explore variations of providing prompt/context explanations of the CSV data
-
-
-
