@@ -10,6 +10,8 @@ This is an exploratory and demonstration project that uses Langchain and Retriev
 
 ## Overview
 
+RAG is one of several techniques that improve LLM performance by providing addional data to the model.  This additional data may be something that the LLM was not originally trained on and is unable to consider in its response.  Similarly, the additional data may frequently change and providing it to the LLM allows the model to provide more accurate responses based on current information.  An advantage of RAG compared to other techniques is that the additional data can be provided along with the LLM prompt and can therefore change along with the prompt.  However this is also a disadvantage in that the processing and other requirements to implement and support RAG must be incurred with each prompt.
+
 The goal of this project is to ask the LLM two questions related to NFL player performance (discussed below) and see if the responses improve if supporting data is provided to the LLM via RAG.  For each question, the following process was used:
 
 * The correct answer is determined using manual methods
@@ -113,6 +115,14 @@ This question requires more analysis for the LLM with RAG CSV data to answer, in
 * group all of the players by team
 * determine the total receiving touchdowns for each team
 * find the max value of this total
+
+Along with the RAG data, the following prefix was provided with the question:
+
+```
+You are a sports data analyst.  Use the provided data containing NFL player statistics for the 2025 season to answer the question as accurately as possible. If the data does not contain the information needed to answer the question, respond with 'I don't know based on the provided data.'
+```      
+
+This was necessary to help the LLM understand that the provided data was for the 2025 season, as the data did not include a column or other indication that it was for 2025.  It is unclear if the remaining information in the prefix made a significant difference in the output.
 
 ## Early iterations
 
