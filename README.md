@@ -58,6 +58,8 @@ Providing the question to the LLM without the RAG data, the response was as foll
 I’m sorry, but I don’t have that information.
 ```
 
+This validates that the LLM was not trained on, and otherwise does not have access to the recent NFL player data.
+
 Providing the same question to the same LLM with the RAG CSV data, the response was:
 
 ```
@@ -95,6 +97,8 @@ Providing the question to the LLM without the RAG data, the response was as foll
 ```
 I’m sorry, but I don’t have information on the 2025 NFL season.
 ```
+
+As with the first question, this response validates that the LLM was not trained on, and otherwise does not have access to the recent NFL player data.
 
 Providing the same question to the same LLM with the RAG CSV data, the response was:
 
